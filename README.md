@@ -1,6 +1,7 @@
 # ImageBrowsing
-九宫格图片浏览器，DES3加密解密，自定义可点击消除MBProgressHUD,FMDB缓存，Masonry基本用法
 
+第一部分：
+九宫格图片浏览器，DES3加密解密，自定义可点击消除MBProgressHUD,FMDB缓存，Masonry基本用法
 
 用法：
 
@@ -85,3 +86,34 @@ present 效果- (IBAction)buttonWithTag:(id)sender {
     MyAppDelegate.mainTabbarVC.tabBar.hidden = NO;
     
 }
+
+
+
+第二部分:FMDB缓存
+
+载入缓存 第一次没有缓存，第二次数据请求保存完毕之后会有
+-(void)loaidngDataCache
+{
+
+    [MyAppDelegate.cacheStore createTableWithName:StoreTableName];
+    
+    {
+        NSDictionary *dicR = [MyAppDelegate.cacheStore getObjectById:GetPhotoKey fromTable:StoreTableName];
+        DLog(@"数据库缓存的数据%@", dicR);
+        
+    }
+}
+
+将服务器数据写入数据库做缓存
+-(void)loaidngDataCache
+{
+
+        //json字串符转字典
+        NSDictionary *dic = [str objectFromJSONString];
+        DLog(@"服务器请求下来的数据%@", dicR);
+        
+        //将服务器数据写入数据库做缓存
+        [MyAppDelegate.cacheStore putObject:dicR withId:GetPhotoKey intoTable:StoreTableName];
+        
+}
+
