@@ -113,7 +113,6 @@ present 效果- (IBAction)buttonWithTag:(id)sender {
 
 
         //json字串符转字典
-        
         NSDictionary *dic = [str objectFromJSONString];
         
         DLog(@"服务器请求下来的数据%@", dicR);
