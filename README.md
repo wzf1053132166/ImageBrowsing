@@ -2,8 +2,11 @@
 九宫格图片浏览器，DES3加密解密，自定义可点击消除MBProgressHUD,FMDB缓存，Masonry基本用法
 
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _images = @[@"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
@@ -12,7 +15,9 @@
                 @"http://oopas6scq.bkt.clouddn.com/image/huanyingguanglin.gif",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg"];
+                
     array = [NSMutableArray array];
+    
     for (int i = 0; i<_images.count; i++) {
         
         UIImageView *imageView = [[UIImageView alloc] init];
@@ -42,14 +47,15 @@
         imageView.userInteractionEnabled = YES;
         UITapGestureRecognizer *tag = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tag:)];
         [imageView addGestureRecognizer:tag];
+        
     }
-    
-    
-    
-    
+
 }
 
+
+
 - (void)tag:(UITapGestureRecognizer *)gestureRecognizer {
+   
    
     NSInteger index = gestureRecognizer.view.tag - 100;
     PhotoZoomBrowser *photoBrowser = [[PhotoZoomBrowser alloc] initWithImages:_images imageFrame:array currentIndex:index way:ZoomVC];
@@ -58,6 +64,7 @@
     [self addChildViewController:photoBrowser];
     [self.view addSubview:photoBrowser.view];
     MyAppDelegate.mainTabbarVC.tabBar.hidden = YES;
+    
     
 }
 
@@ -72,4 +79,5 @@
 - (void)photoBrowser:(PhotoZoomBrowser *)photoBrowser didSelectImage:(id)image photoIndex:(NSInteger)photoIndex{
     
     MyAppDelegate.mainTabbarVC.tabBar.hidden = NO;
+    
 }
