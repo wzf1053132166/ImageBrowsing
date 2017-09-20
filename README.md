@@ -2,12 +2,13 @@
 九宫格图片浏览器，DES3加密解密，自定义可点击消除MBProgressHUD,FMDB缓存，Masonry基本用法
 
 
-
+用法：
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _images = @[@"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
+
+    
+    [super viewDidLoad];
+    _images = @[@"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/huanyingguanglin.gif",
