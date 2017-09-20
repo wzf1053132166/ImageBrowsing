@@ -111,6 +111,7 @@ present 效果- (IBAction)buttonWithTag:(id)sender {
 -(void)loaidngDataCache
 {
 
+
         //json字串符转字典
         
         NSDictionary *dic = [str objectFromJSONString];
