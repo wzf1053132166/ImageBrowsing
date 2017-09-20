@@ -1,0 +1,22 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, ‘8.0’
+
+target ‘TMC’ do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for TMC
+	pod 'SDAutoLayout'
+	pod 'AFNetworking'
+	pod 'MJExtension'
+	pod 'SDWebImage'
+	pod 'MJRefresh'
+	pod ‘IQKeyboardManager’
+	#pod ‘MBProgressHUD’
+ 	pod ‘SDCycleScrollView’
+	pod 'FMDB'
+	pod ‘JSONKit’
+	pod 'MBProgressHUD','~>0.9.2’
+	#pod 'ReactiveCocoa',’~>2.5’
+	pod 'Masonry’,’~>1.0.2’
+end

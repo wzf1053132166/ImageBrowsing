@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InsuranceCompanyView">
+            <connections>
+                <outlet property="insuranceCompany" destination="iN0-l3-epB" id="KEs-Mu-Ni2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InsuranceCompanyView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-commission" translatesAutoresizingMaskIntoConstraints="NO" id="PyU-cy-Smy">
+                    <rect key="frame" x="93" y="180" width="135" height="161"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="161" id="6Fj-W1-9su"/>
+                        <constraint firstAttribute="width" constant="135" id="U0g-O1-bGq"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="PyU-cy-Smy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-23.5" id="gN8-EN-Idy"/>
+                <constraint firstItem="PyU-cy-Smy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="0.5" id="x5D-8t-0Sq"/>
+            </constraints>
+            <point key="canvasLocation" x="-30" y="321"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no-commission" width="135" height="161"/>
+    </resources>
+</document>
