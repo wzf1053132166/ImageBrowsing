@@ -6,7 +6,10 @@
 
 初始化- (void)viewDidLoad {
     
+    
+    
     [super viewDidLoad];
+    
     
     _images = @[@"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
