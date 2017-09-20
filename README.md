@@ -89,6 +89,9 @@ present 效果- (IBAction)buttonWithTag:(id)sender {
 
 
 
+
+
+
 第二部分:FMDB缓存
 
 载入缓存 第一次没有缓存，第二次数据请求保存完毕之后会有
@@ -111,7 +114,6 @@ present 效果- (IBAction)buttonWithTag:(id)sender {
         //json字串符转字典
         NSDictionary *dic = [str objectFromJSONString];
         DLog(@"服务器请求下来的数据%@", dicR);
-        
         //将服务器数据写入数据库做缓存
         [MyAppDelegate.cacheStore putObject:dicR withId:GetPhotoKey intoTable:StoreTableName];
         
