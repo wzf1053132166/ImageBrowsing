@@ -4,10 +4,10 @@
 
 用法：
 
-- (void)viewDidLoad {
-
+初始化- (void)viewDidLoad {
     
     [super viewDidLoad];
+    
     _images = @[@"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
                 @"http://oopas6scq.bkt.clouddn.com/image/wzry_libai.jpeg",
@@ -55,7 +55,7 @@
 
 
 
-- (void)tag:(UITapGestureRecognizer *)gestureRecognizer {
+九宫格 - (void)tag:(UITapGestureRecognizer *)gestureRecognizer {
    
    
     NSInteger index = gestureRecognizer.view.tag - 100;
@@ -69,7 +69,7 @@
     
 }
 
-- (IBAction)buttonWithTag:(id)sender {
+present 效果- (IBAction)buttonWithTag:(id)sender {
     
     PhotoZoomBrowser *photoBrowser = [[PhotoZoomBrowser alloc] initWithImages:_images imageFrame:array currentIndex:4 way:PushVC];
     photoBrowser.delegate = self;
@@ -77,7 +77,7 @@
 }
 
 
-- (void)photoBrowser:(PhotoZoomBrowser *)photoBrowser didSelectImage:(id)image photoIndex:(NSInteger)photoIndex{
+代理返回 - (void)photoBrowser:(PhotoZoomBrowser *)photoBrowser didSelectImage:(id)image photoIndex:(NSInteger)photoIndex{
     
     MyAppDelegate.mainTabbarVC.tabBar.hidden = NO;
     
